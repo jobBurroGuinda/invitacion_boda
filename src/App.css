@@ -1,0 +1,274 @@
+/* ===== FONDO PERLA: header, cards, formulario, footer ===== */
+
+/* Fondo perla para todas las secciones que tapaban el body */
+.Our-story-area,
+.contact-form,
+.brand-area,
+.contact-sections,
+.preloader {
+  background-color: transparent !important;
+}
+
+/* Header: perla en todo momento (normal y sticky) */
+.header-area,
+.main-header {
+  background: linear-gradient(
+    135deg,
+    #fdf0dc 0%,
+    #e8d0a8 50%,
+    #fdf0dc 100%
+  ) !important;
+  border-bottom: 1px solid rgba(201, 169, 110, 0.35) !important;
+  box-shadow: 0 2px 12px rgba(139, 105, 20, 0.1) !important;
+}
+
+/* Formulario wrapper */
+.contact-form .form-wrapper {
+  background: linear-gradient(135deg, rgba(253,248,240,0.95) 0%, rgba(240,228,210,0.95) 100%) !important;
+  backdrop-filter: blur(4px);
+  border: 1px solid #c9a96e !important;
+  box-shadow: 0 4px 18px rgba(139,105,20,0.12), inset 0 1px 0 rgba(255,255,255,0.8) !important;
+  border-radius: 12px !important;
+}
+
+/* Campos de texto del formulario: borde dorado igual que el div bancario */
+.contact-form .form-wrapper input,
+.contact-form .form-wrapper textarea,
+.contact-form .form-wrapper .nice-select {
+  border: 1px solid rgba(201,169,110,0.3) !important;
+  border-radius: 6px !important;
+}
+.contact-form .form-wrapper input:focus,
+.contact-form .form-wrapper textarea:focus {
+  border-color: #c9a96e !important;
+  box-shadow: 0 0 0 2px rgba(201,169,110,0.2) !important;
+  outline: none !important;
+}
+
+/* Cards de itinerario, ceremonia y vestimenta */
+.pricing-card-area .single-card {
+  background: linear-gradient(135deg, rgba(253,248,240,0.95) 0%, rgba(240,228,210,0.95) 100%) !important;
+  border: 1px solid #c9a96e !important;
+  box-shadow: 0 4px 18px rgba(139,105,20,0.12), inset 0 1px 0 rgba(255,255,255,0.8) !important;
+  border-radius: 12px !important;
+}
+
+/* Footer */
+.footer-main,
+.footer-bottom-area {
+  background: linear-gradient(
+    135deg,
+    rgba(240, 228, 210, 0.97) 0%,
+    rgba(220, 200, 170, 0.97) 50%,
+    rgba(240, 228, 210, 0.97) 100%
+  ) !important;
+  border-top: 1px solid rgba(201, 169, 110, 0.4) !important;
+}
+
+/* Botón de música flotante */
+button[title="Pausar música"],
+button[title="Reproducir música"] {
+  background: radial-gradient(circle, #f0f0f0 0%, #a8a8a8 100%) !important;
+  border: 2px solid #ffffff !important;
+  color: #6b6b6b !important;
+  box-shadow:
+    inset 0px 1px 3px rgba(255,255,255,0.8),
+    0px 4px 10px rgba(0,0,0,0.3) !important;
+}
+
+/* Reemplazar rojo del template por gris humo */
+.btn,
+.btn-whit,
+.card-btn1,
+.send-btn,
+.boxed-btn,
+.submit-info .btn {
+  background: #6b6b6b !important;
+  color: #fff !important;
+  border-color: #6b6b6b !important;
+}
+.btn::before,
+.card-btn1::before,
+.send-btn::before {
+  background: #4a4a4a !important;
+}
+
+/* Borde activo en cards */
+.pricing-card-area .single-card.active,
+.pricing-card-area .single-card:hover {
+  border-color: #c9a96e !important;
+}
+
+/* Preloader circle */
+.preloader .preloader-circle {
+  border-top-color: #6b6b6b !important;
+}
+
+/* Scroll up button */
+#scrollUp {
+  background: #6b6b6b !important;
+}
+
+/* Menú hover y submenú */
+.main-header .main-menu ul li:hover > a {
+  color: #6b6b6b !important;
+}
+.main-header .main-menu ul ul.submenu {
+  border-top-color: #6b6b6b !important;
+  border-bottom-color: #6b6b6b !important;
+}
+
+/* Galería thumb hover */
+.gallery-area .single-gallery .thumb-content-box .thumb-content {
+  background: #6b6b6b !important;
+}
+
+/* ===================== DETALLES PLATA ===================== */
+
+/* Botones: borde y brillo plata */
+.btn,
+.card-btn1,
+.btn-whit {
+  border: 1px solid #c0c0c0 !important;
+  box-shadow: 0 1px 4px rgba(192,192,192,0.35) !important;
+}
+.btn:hover,
+.card-btn1:hover {
+  box-shadow: 0 2px 10px rgba(192,192,192,0.55) !important;
+}
+
+/* Card activo/hover: borde dorado más intenso */
+.pricing-card-area .single-card.active,
+.pricing-card-area .single-card:hover {
+  border-color: #8b6914 !important;
+  box-shadow: 0 8px 28px rgba(139,105,20,0.2) !important;
+}
+/* Línea divisoria del card-top: dorado suave */
+.pricing-card-area .single-card .card-top {
+  border-bottom-color: rgba(201,169,110,0.3) !important;
+}
+
+
+
+/* Scroll up: borde plata */
+#scrollUp {
+  border: 2px solid #c0c0c0 !important;
+}
+
+/* Submenú: borde plata */
+.main-header .main-menu ul ul.submenu {
+  border-top-color: #c0c0c0 !important;
+  border-bottom-color: #c0c0c0 !important;
+}
+
+/* Títulos de sección: relieve dorado/bronce sobre fondo crema */
+.section-tittle h2,
+.section-tittle.tittle-form h2 {
+  background: linear-gradient(180deg, #c9a96e 0%, #8b6914 40%, #c9a96e 70%, #f0d898 100%) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  background-clip: text !important;
+  filter: drop-shadow(0px 1px 1px rgba(90,60,10,0.25));
+  font-family: 'Cinzel', serif !important;
+  font-weight: bold;
+}
+
+/* Subtítulos y títulos de cards */
+h3, h4, h5, h6 {
+  color: #5c4a32 !important;
+  text-shadow: none !important;
+  font-family: 'Cinzel', serif !important;
+}
+
+/* h1 del hero (sobre imagen oscura, se mantiene blanco) */
+h1 {
+  color: #fff !important;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.4) !important;
+  font-family: 'Cinzel', serif !important;
+}
+
+/* h2 genéricos fuera de section-tittle */
+h2 {
+  color: #5c4a32 !important;
+  font-family: 'Cinzel', serif !important;
+}
+
+/* Párrafos de cuerpo */
+p {
+  color: #7a6248 !important;
+}
+
+/* Menú de cabecera */
+.main-header .main-menu ul li a {
+  font-family: 'Cinzel', serif !important;
+  color: #4a3728 !important;
+}
+.main-header .main-menu ul li:hover > a {
+  color: #8b6914 !important;
+}
+
+/* Texto de cards: mismos colores que el div bancario */
+.pricing-card-area .single-card .card-bottom ul li,
+.pricing-card-area .single-card .card-bottom ul li i,
+.pricing-card-area .single-card .card-bottom ul li strong {
+  color: #5c4a32 !important;
+}
+.pricing-card-area .single-card .card-top h4 {
+  color: #8b6914 !important;
+  font-weight: 600 !important;
+}
+
+/* Texto dentro del formulario: mismos colores que el div bancario */
+.contact-form .form-wrapper input,
+.contact-form .form-wrapper textarea {
+  color: #5c4a32 !important;
+  background: rgba(255,255,255,0.5) !important;
+}
+.contact-form .form-wrapper input::placeholder,
+.contact-form .form-wrapper textarea::placeholder {
+  color: #8b6914 !important;
+  opacity: 0.7;
+}
+
+/* Footer texto */
+.footer-bottom-area .footer-copy-right p {
+  color: #7a6248 !important;
+}
+
+/* Footer border plata */
+.footer-bottom-area .footer-border {
+  border-top-color: #c0c0c0 !important;
+}
+
+/* Preloader: sombra plata */
+.preloader .preloader-circle {
+  box-shadow: 0 1px 8px rgba(192,192,192,0.5) !important;
+}
+
+.Our-story-area .story-img .story2 {
+  position: static !important;
+  bottom: unset !important;
+  left: unset !important;
+  width: 100%;
+  height: 583px;
+  object-fit: cover;
+  object-position: top;
+  display: block;
+}
+
+.Our-story-area .row.justify-content-center {
+  align-items: flex-start;
+}
+
+/* Recuadro de historia: ancho completo en móvil para alinearse con la foto */
+@media (max-width: 767px) {
+  .Our-story-area .story-caption.background-img {
+    width: 100% !important;
+    min-height: 395px;
+    height: auto !important;
+  }
+  .Our-story-area .story-caption .story-details {
+    padding-left: 30px !important;
+    padding-right: 20px !important;
+  }
+}

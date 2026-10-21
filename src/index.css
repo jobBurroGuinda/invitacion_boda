@@ -1,0 +1,26 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #7a6248;
+  background: linear-gradient(
+    135deg,
+    #fdf8f0 0%,
+    #c9b99a 20%,
+    #faf4e8 40%,
+    #b8a48a 60%,
+    #f5ede0 80%,
+    #c9b99a 100%
+  );
+  background-size: 300% 300%;
+  animation: brilloSeda 8s ease infinite;
+}
+
+@keyframes brilloSeda {
+  0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
