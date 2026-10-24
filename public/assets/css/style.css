@@ -17,3 +17,5 @@ p{color:#e8c8cc}
 .footer-main{background:rgba(30,5,8,0.85)}
 .footer-bottom-area .footer-border{border-top:1px solid rgba(245,213,216,0.2)}
 .header-area,.main-header,.header-sticky{background:#3D0E14 !important}
+.modal-confirm h3,.modal-confirm p,.modal-confirm h2{color:#2c1a1d !important}
+.form-wrapper h2,.form-wrapper p,.form-wrapper h3{color:#2c1a1d !important}

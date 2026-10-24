@@ -78,7 +78,7 @@ function AudioPlayer({ invitacion }) {
             </p>
             {invitacion && (
               <>
-                <p style={{ fontSize: 'clamp(1rem, 4vw, 1.25rem)', fontWeight: 600, marginBottom: '8px', letterSpacing: '1px' }}>
+                <p style={{ fontSize: 'clamp(1rem, 4vw, 1.25rem)', fontWeight: 600, marginBottom: '8px', letterSpacing: '1px', fontFamily: "'Cinzel', serif" }}>
                   {invitacion.name}
                 </p>
                 {invitacion.mensaje_novios && (

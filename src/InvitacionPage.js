@@ -154,16 +154,17 @@ function RSVPForm({ invitacion, docId, onConfirmado }) {
           display: 'flex', alignItems: 'center', justifyContent: 'center',
           padding: '24px'
         }}>
-          <div style={{
+          <div className="modal-confirm" style={{
             background: '#fff', borderRadius: '16px',
             padding: '32px 28px', maxWidth: '400px', width: '100%',
-            textAlign: 'center', boxShadow: '0 8px 40px rgba(0,0,0,0.2)'
+            textAlign: 'center', boxShadow: '0 8px 40px rgba(0,0,0,0.2)',
+            color: '#2c1a1d'
           }}>
             <div style={{ fontSize: '40px', marginBottom: '12px' }}>💍</div>
             <h3 style={{ fontFamily: "'Cinzel', serif", marginBottom: '12px', fontSize: '1.1rem' }}>
               Confirmar asistencia
             </h3>
-            <p style={{ color: '#636363', lineHeight: 1.7, marginBottom: '24px', fontSize: '0.95rem' }}>
+            <p style={{ lineHeight: 1.7, marginBottom: '24px', fontSize: '0.95rem' }}>
               Estás a punto de confirmar tu asistencia el <strong>15 de enero del 2027</strong> en <strong>Chihuahua</strong>. ¿Deseas continuar?
             </p>
             <div style={{ display: 'flex', gap: '12px', justifyContent: 'center' }}>

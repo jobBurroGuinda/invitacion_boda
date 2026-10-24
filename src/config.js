@@ -8,7 +8,7 @@
 export const MUSIC_FILE = "/assets/audio/background.mp3";
 
 /** Timestamp (ms) del límite para confirmar asistencia. @type {number} */
-export const RSVP_DEADLINE = new Date('2027-01-01T00:00:00-06:00').getTime();
+export const RSVP_DEADLINE = new Date('2026-12-16T20:00:00-06:00').getTime();
 
 /** Nombre de la novia. @type {string} */
 export const BRIDE_NAME = "Tiatira";
@@ -24,7 +24,7 @@ export const WEDDING_TAGLINE = "";
  * Usado por el contador regresivo. GMT-6 (Horario Central de México).
  * @type {number}
  */
-export const WEDDING_DATE = new Date('2026-12-16T20:00:00-06:00').getTime();
+export const WEDDING_DATE = new Date('2027-01-15T20:00:00-06:00').getTime();
 
 /** Zona horaria del evento. @type {string} */
 export const TIMEZONE = "Horario Central de Chihuahua";
