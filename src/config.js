@@ -31,18 +31,8 @@ export const TIMEZONE = "Horario Central de Chihuahua";
 
 /** Título de la sección de historia de amor. @type {string} */
 export const LOVE_STORY_TITLE = "Nuestra Historia de Amor";
-/** Párrafo 1 de la historia de amor. @type {string} */
+/** Párrafo de la historia de amor. @type {string} */
 export const LOVE_STORY_PARAGRAPH_1 = "Todo comenzó con una conversación, sin imaginar que esas palabras se convertirían en llamadas interminables, viajes, abrazos y sueños compartidos.";
-/** Párrafo 2 de la historia de amor. @type {string} */
-export const LOVE_STORY_PARAGRAPH_2 = "";
-/** Párrafo 3 de la historia de amor. @type {string} */
-export const LOVE_STORY_PARAGRAPH_3 = "";
-/** Párrafo 4 de la historia de amor. @type {string} */
-export const LOVE_STORY_PARAGRAPH_4 = "";
-/** Párrafo 5 de la historia de amor. @type {string} */
-export const LOVE_STORY_PARAGRAPH_5 = "";
-/** Párrafo 6 (cierre) de la historia de amor. @type {string} */
-export const LOVE_STORY_PARAGRAPH_6 = "";
 
 /** Título de la sección de propuesta. @type {string} */
 export const PROPOSAL_TITLE = "";
@@ -64,11 +54,10 @@ export const SCHEDULE_TITLE = "Itinerario";
  */
 export const SCHEDULE = [
   { time: "8:00 PM", event: "Recepción de invitados" },
-  { time: "8:30 PM", event: "Ceremonia civil" },
-  { time: "9:30 PM", event: "Cena" },
-  { time: "10:00 PM", event: "Brindis" },
-  { time: "10:30 PM", event: "Baile" },
-  { time: "11:00 PM", event: "Fiesta" },
+  { time: "8:10 PM", event: "Boda civil" },
+  { time: "8:50 PM", event: "Cena" },
+  { time: "9:30 PM", event: "Brindis" },
+  { time: "10:00 PM", event: "Fiesta" },
 ];
 
 /** Título de la tarjeta de código de vestimenta. @type {string} */

@@ -4,9 +4,8 @@ import InvitacionPage from './InvitacionPage';
 import NotFoundPage from './NotFoundPage';
 import {
   BRIDE_NAME, GROOM_NAME, WEDDING_DATE_DISPLAY, WEDDING_TAGLINE, WEDDING_DATE,
-  LOVE_STORY_TITLE, LOVE_STORY_PARAGRAPH_1, LOVE_STORY_PARAGRAPH_2,
-  LOVE_STORY_PARAGRAPH_3, LOVE_STORY_PARAGRAPH_4, LOVE_STORY_PARAGRAPH_5,
-  LOVE_STORY_PARAGRAPH_6, PROPOSAL_TITLE, PROPOSAL_TEXT_1, PROPOSAL_TEXT_2,
+  LOVE_STORY_TITLE, LOVE_STORY_PARAGRAPH_1,
+  PROPOSAL_TITLE, PROPOSAL_TEXT_1, PROPOSAL_TEXT_2,
   WEDDING_INFO_TITLE, WEDDING_INFO_DESCRIPTION, CEREMONY, SCHEDULE_TITLE, SCHEDULE,
   DRESSCODE_TITLE, DRESSCODE_STYLE, DRESSCODE_DESCRIPTION, DRESSCODE_PALETTE,
   GIFT_TITLE, GIFT_BUTTON, REGISTRY_TITLE, REGISTRY_DESCRIPTION, REGISTRY_BANK_INFO,
@@ -69,14 +68,31 @@ function AudioPlayer({ invitacion }) {
           position: 'fixed', inset: 0, zIndex: 99999, background: 'rgba(0,0,0,0.82)',
           display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', cursor: 'pointer'
         }}>
-          <div style={{ textAlign: 'center', color: '#fff', fontFamily: "'Cinzel', serif", padding: '0 24px' }}>
+          <div style={{ textAlign: 'center', color: '#fff', fontFamily: "'Cinzel', serif", padding: '0 24px', maxWidth: '480px', width: '100%' }}>
             <div style={{ fontSize: '48px', marginBottom: '16px' }}>💍</div>
-            <h2 style={{ fontSize: '2rem', fontWeight: 400, marginBottom: '8px', letterSpacing: '2px' }}>
+            <h2 style={{ fontSize: 'clamp(1.4rem, 5vw, 2rem)', fontWeight: 400, marginBottom: '8px', letterSpacing: '2px' }}>
               {GROOM_NAME} &amp; {BRIDE_NAME}
             </h2>
-            <p style={{ fontSize: '1rem', opacity: 0.75, marginBottom: '36px', fontFamily: 'sans-serif' }}>
+            <p style={{ fontSize: 'clamp(0.85rem, 3vw, 1rem)', opacity: 0.75, marginBottom: invitacion ? '20px' : '36px', fontFamily: 'sans-serif' }}>
               {WEDDING_DATE_DISPLAY}
             </p>
+            {invitacion && (
+              <>
+                <p style={{ fontSize: 'clamp(1rem, 4vw, 1.25rem)', fontWeight: 600, marginBottom: '8px', letterSpacing: '1px' }}>
+                  {invitacion.name}
+                </p>
+                {invitacion.mensaje_novios && (
+                  <p style={{
+                    fontSize: 'clamp(0.8rem, 3vw, 0.95rem)', opacity: 0.85,
+                    fontFamily: 'sans-serif', lineHeight: 1.7,
+                    marginBottom: '28px', whiteSpace: 'pre-line',
+                    maxHeight: '120px', overflowY: 'auto'
+                  }}>
+                    {invitacion.mensaje_novios}
+                  </p>
+                )}
+              </>
+            )}
             <div style={{
               border: '1px solid rgba(255,255,255,0.6)', padding: '14px 40px',
               fontSize: '0.95rem', letterSpacing: '3px', textTransform: 'uppercase', display: 'inline-block'
@@ -290,15 +306,15 @@ export function WeddingPage({ invitacion = null, asistenciaSlot = null }) {
       <main>
         <div id="inicio" className="slider-area">
           <div className="slider-active">
-            <div className="single-slider slider-height hero-overly d-flex align-items-center">
-              <div className="container">
-                <div className="row d-flex align-items-center">
+            <div className="single-slider slider-height hero-overly d-flex align-items-end">
+              <div className="container" style={{ paddingBottom: '80px' }}>
+                <div className="row d-flex align-items-end">
                   <div className="col-xl-8 col-lg-6 col-md-8">
                     <div className="hero__caption">
-                      <span data-animation="fadeInLeft" data-delay=".3s">{WEDDING_DATE_DISPLAY}</span>
-                      <h1 data-animation="fadeInLeft" data-delay=".5s" data-duration="2000ms" style={{ fontFamily: "'Cinzel', serif" }}>
+                      <h1 data-animation="fadeInLeft" data-delay=".3s" data-duration="2000ms" style={{ fontFamily: "'Cinzel', serif", marginBottom: '8px' }}>
                         {GROOM_NAME}<strong> & </strong>{BRIDE_NAME}
                       </h1>
+                      <span data-animation="fadeInLeft" data-delay=".5s">{WEDDING_DATE_DISPLAY}</span>
                       <p data-animation="fadeInLeft" data-delay=".9s">{WEDDING_TAGLINE}</p>
                     </div>
                   </div>
@@ -308,21 +324,7 @@ export function WeddingPage({ invitacion = null, asistenciaSlot = null }) {
           </div>
         </div>
 
-        {!isPublic && invitacion && (
-          <div className="Our-story-area story-padding" style={{ paddingBottom: '40px' }}>
-            <div className="container">
-              <div className="row d-flex justify-content-center">
-                <div className="col-xl-7 col-lg-8">
-                  <div className="section-tittle text-center mb-70">
-                    <h2>Para ti, {invitacion.name}</h2>
-                    <img src="/assets/img/gallery/tittle_img.png" alt="" />
-                    <p style={{ whiteSpace: 'pre-line' }}>{invitacion.mensaje_novios}</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        )}
+
 
         <div id="historia" className="Our-story-area story-padding">
           <div className="container">
@@ -332,28 +334,14 @@ export function WeddingPage({ invitacion = null, asistenciaSlot = null }) {
                   <h2>{LOVE_STORY_TITLE}</h2>
                   <img src="/assets/img/gallery/tittle_img.png" alt="" />
                   <p>{LOVE_STORY_PARAGRAPH_1}</p>
-                  <p>{LOVE_STORY_PARAGRAPH_2}</p>
-                  <p>{LOVE_STORY_PARAGRAPH_3}</p>
-                  <p>{LOVE_STORY_PARAGRAPH_4}</p>
-                  <p>{LOVE_STORY_PARAGRAPH_5}</p>
-                  <p>{LOVE_STORY_PARAGRAPH_6}</p>
                 </div>
               </div>
             </div>
-            <div className="row justify-content-center" style={{ alignItems: 'flex-start' }}>
-              <div className="col-lg-5">
-                <div className="story-caption background-img mb-40" style={{ backgroundImage: 'url(/assets/img/gallery/story2.jpg)' }}>
-                  <div className="story-details">
-                    <h4>{PROPOSAL_TITLE}</h4>
-                    <p>{PROPOSAL_TEXT_1}</p>
-                    <p>{PROPOSAL_TEXT_2}</p>
-                  </div>
-                </div>
-              </div>
-              <div className="col-lg-5">
-                <div className="story-img" style={{ height: '583px', overflow: 'hidden' }}>
-                  <img className="story2" src="/assets/img/gallery/foto-bienvenida.png" alt=""
-                    style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'top', position: 'static', bottom: 'unset', left: 'unset' }} />
+            <div className="row justify-content-center">
+              <div className="col-lg-5 col-md-7 col-sm-9 col-10">
+                <div style={{ borderRadius: '8px', overflow: 'hidden', maxHeight: '500px' }}>
+                  <img src="/assets/img/gallery/historia_1.jpg" alt="Misael y Tiatira"
+                    style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'top', display: 'block' }} />
                 </div>
               </div>
             </div>
@@ -361,7 +349,7 @@ export function WeddingPage({ invitacion = null, asistenciaSlot = null }) {
         </div>
 
         {!isPublic && (
-          <section id="informacion" className="pricing-card-area section-padding30 section-bg" data-background="/assets/img/gallery/section_bg1.png">
+          <section id="informacion" className="pricing-card-area section-padding30">
             <div className="container">
               <div className="row d-flex justify-content-center">
                 <div className="col-lg-8">
@@ -480,7 +468,7 @@ export function WeddingPage({ invitacion = null, asistenciaSlot = null }) {
         <div id="galeria" className="gallery-area section-padding4">
           <div className="container">
             <div className="row">
-              {['foto_galeria_1.jpg','foto_galeria_2.jpg','foto_galeria_3.jpg','foto_galeria_4.jpg','foto_galeria_5.jpg'].map((img, i) => (
+              {['foto_galeria_1.jpg','foto_galeria_2.jpg','foto_galeria_3.jpg','foto_galeria_4.jpg'].map((img, i) => (
                 <div key={i} className={`col-lg-${i === 0 || i === 3 ? 4 : 8} col-md-6`}>
                   <div className="single-gallery mb-30">
                     <div className="gallery-img" style={{ backgroundImage: `url(/assets/img/gallery/${img})` }}></div>
