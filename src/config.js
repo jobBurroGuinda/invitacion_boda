@@ -15,16 +15,16 @@ export const BRIDE_NAME = "Tiatira";
 /** Nombre del novio. @type {string} */
 export const GROOM_NAME = "Misael";
 /** Fecha de la boda en formato legible. @type {string} */
-export const WEDDING_DATE_DISPLAY = "15 de enero del 2027";
+export const WEDDING_DATE_DISPLAY = "15.01.27";
 /** Frase principal del hero de la invitación. @type {string} */
-export const WEDDING_TAGLINE = "Hay historias que comienzan por casualidad... La nuestra decidió quedarse para siempre";
+export const WEDDING_TAGLINE = "";
 
 /**
  * Timestamp (ms) de la fecha y hora exacta de la boda.
  * Usado por el contador regresivo. GMT-6 (Horario Central de México).
  * @type {number}
  */
-export const WEDDING_DATE = new Date('2027-01-15T20:00:00-06:00').getTime();
+export const WEDDING_DATE = new Date('2026-12-16T20:00:00-06:00').getTime();
 
 /** Zona horaria del evento. @type {string} */
 export const TIMEZONE = "Horario Central de Chihuahua";
@@ -34,15 +34,15 @@ export const LOVE_STORY_TITLE = "Nuestra Historia de Amor";
 /** Párrafo 1 de la historia de amor. @type {string} */
 export const LOVE_STORY_PARAGRAPH_1 = "Todo comenzó con una conversación, sin imaginar que esas palabras se convertirían en llamadas interminables, viajes, abrazos y sueños compartidos.";
 /** Párrafo 2 de la historia de amor. @type {string} */
-export const LOVE_STORY_PARAGRAPH_2 = "Con el tiempo entendí que el amor no consiste en encontrar a la persona perfecta sino en encontrar a alguien con quien todo tiene sentido, y desde que llegaste a mi vida descubrí que un hogar no es un lugar… es la persona con la que quieres despertar todos los días.";
+export const LOVE_STORY_PARAGRAPH_2 = "";
 /** Párrafo 3 de la historia de amor. @type {string} */
-export const LOVE_STORY_PARAGRAPH_3 = "Muchos dicen que la distancia pone a prueba el amor, nosotros descubrimos que también puede enseñarte el verdadero valor de cada encuentro, de cada abrazo después de la espera y de cada momento compartido, cada kilómetro recorrido nos acercó un poco más al día que tanto soñamos.";
+export const LOVE_STORY_PARAGRAPH_3 = "";
 /** Párrafo 4 de la historia de amor. @type {string} */
-export const LOVE_STORY_PARAGRAPH_4 = "Hoy al mirar todo el camino que hemos recorrido, solo puedo agradecer a DIOS por habernos permitido llegar hasta aquí. Gracias por elegirme, por creer en nosotros y por caminar a mi lado incluso en los momentos difíciles.";
+export const LOVE_STORY_PARAGRAPH_4 = "";
 /** Párrafo 5 de la historia de amor. @type {string} */
-export const LOVE_STORY_PARAGRAPH_5 = "Hoy quiero prometerte, seguir eligiéndote una y otra vez, cuidar de nosotros, celebrar tus alegrías, sostener tu mano en los días complicados, y construir, contigo, el hogar y la vida que hemos soñado.";
+export const LOVE_STORY_PARAGRAPH_5 = "";
 /** Párrafo 6 (cierre) de la historia de amor. @type {string} */
-export const LOVE_STORY_PARAGRAPH_6 = "Te amo. Para siempre.";
+export const LOVE_STORY_PARAGRAPH_6 = "";
 
 /** Título de la sección de propuesta. @type {string} */
 export const PROPOSAL_TITLE = "";
