@@ -129,10 +129,18 @@ function AudioPlayer({ invitacion }) {
               {invitacion ? invitacion.name : `${GROOM_NAME} & ${BRIDE_NAME}`}
             </div>
             {invitacion?.mensaje_novios && (
-              <p className="loader-message">
-                {invitacion.mensaje_novios.split('\n').map((line, i, arr) => (
-                  <React.Fragment key={i}>{line}{i < arr.length - 1 && <br />}</React.Fragment>
-                ))}
+              <div className="loader-message-box">
+                <p className="loader-message">
+                  {invitacion.mensaje_novios.split('\n').map((line, i, arr) => (
+                    <React.Fragment key={i}>{line}{i < arr.length - 1 && <br />}</React.Fragment>
+                  ))}
+                </p>
+              </div>
+            )}
+            {invitacion && (
+              <p className="loader-signature">
+                Con cariño<br />
+                {GROOM_NAME} <span style={{ fontStyle: 'normal' }}>&</span> {BRIDE_NAME}
               </p>
             )}
             <div className="hero-btn-outline loader-open-btn">
