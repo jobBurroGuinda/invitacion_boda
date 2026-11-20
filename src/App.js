@@ -644,6 +644,7 @@ export function WeddingPage({ invitacion = null, asistenciaSlot = null }) {
                 <li><a href="#regalos">Mesa de Regalos</a></li>
               </ul>
             </div>
+{!isPublic && (
             <div className="col-lg-4 col-md-6">
               <h5>La Boda</h5>
               <ul className="list-unstyled footer-links">
@@ -653,6 +654,7 @@ export function WeddingPage({ invitacion = null, asistenciaSlot = null }) {
                 <li><i className="fas fa-map-pin me-2" style={{ color: '#c9a96e' }} />{CEREMONY.address}</li>
               </ul>
             </div>
+          )}
           </div>
         </div>
         <div className="footer-bottom">
