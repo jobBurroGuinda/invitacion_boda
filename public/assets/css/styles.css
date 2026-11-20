@@ -322,6 +322,12 @@ a:hover { color: var(--secondary-color); }
   background-size: cover;
   z-index: -1;
 }
+
+@media (max-width: 768px) and (orientation: portrait) {
+  .hero-section::before {
+    background-position: 75% center;
+  }
+}
 .hero-section::after {
   content: '';
   position: absolute;
@@ -600,8 +606,10 @@ a:hover { color: var(--secondary-color); }
   width: 100%;
   height: 260px;
   object-fit: cover;
+  object-position: center;
   display: block;
 }
+.gallery-item img.gallery-img-top { object-position: top; }
 .gallery-item:hover img { transform: scale(1.08); }
 .gallery-item .overlay {
   position: absolute;

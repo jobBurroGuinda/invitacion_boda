@@ -478,7 +478,11 @@ export function WeddingPage({ invitacion = null, asistenciaSlot = null }) {
               <div key={i} className="col-md-4 col-sm-6" data-aos="zoom-in" data-aos-delay={i * 80}>
                 <div className="gallery-item">
                   <a href={`/assets/img/gallery/${img}`} data-lightbox="gallery" data-title={`Foto ${i + 1}`}>
-                    <img src={`/assets/img/gallery/${img}`} alt={`Foto ${i + 1}`} />
+                    <img
+                      src={`/assets/img/gallery/${img}`}
+                      alt={`Foto ${i + 1}`}
+                      className={i === 0 ? 'gallery-img-top' : ''}
+                    />
                     <div className="overlay"><i className="fas fa-search-plus" /></div>
                   </a>
                 </div>
