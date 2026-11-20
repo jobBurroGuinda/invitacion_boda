@@ -130,7 +130,9 @@ function AudioPlayer({ invitacion }) {
             </div>
             {invitacion?.mensaje_novios && (
               <p className="loader-message">
-                {invitacion.mensaje_novios}
+                {invitacion.mensaje_novios.split('\n').map((line, i, arr) => (
+                  <React.Fragment key={i}>{line}{i < arr.length - 1 && <br />}</React.Fragment>
+                ))}
               </p>
             )}
             <div className="hero-btn-outline loader-open-btn">

@@ -131,7 +131,6 @@ a:hover { color: var(--secondary-color); }
   font-family: 'Montserrat', sans-serif;
   font-size: 0.9rem;
   line-height: 1.75;
-  white-space: pre-line;
   margin-top: 14px;
   width: 100%;
   overflow: visible;
