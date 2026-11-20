@@ -129,33 +129,39 @@ a:hover { color: var(--secondary-color); }
 .loader-message-box {
   margin-top: 16px;
   width: 100%;
-  border-left: 3px solid #c9a96e;
-  border-radius: 0 8px 8px 0;
-  padding: 14px 18px;
-  background: rgba(201, 169, 110, 0.15);
+  border-radius: 4px;
+  padding: 18px 20px 16px;
+  background: linear-gradient(160deg, rgba(240, 220, 170, 0.18) 0%, rgba(201, 169, 110, 0.12) 50%, rgba(240, 220, 170, 0.18) 100%);
+  border-top: 1px solid rgba(201, 169, 110, 0.6);
+  border-bottom: 1px solid rgba(201, 169, 110, 0.6);
+  border-left: none;
+  border-right: none;
   position: relative;
+  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.25), inset 0 1px 0 rgba(255, 220, 140, 0.15);
 }
 
-.loader-message-box::before {
-  content: '\201C';
+.loader-message-box::before,
+.loader-message-box::after {
+  content: '';
   position: absolute;
-  top: -10px;
-  left: 10px;
-  font-family: 'Playfair Display', serif;
-  font-size: 3rem;
-  color: #c9a96e;
-  line-height: 1;
-  opacity: 0.8;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 40%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #c9a96e, transparent);
 }
+.loader-message-box::before { top: 4px; }
+.loader-message-box::after  { bottom: 4px; }
 
 .loader-message {
-  color: #fff;
+  color: rgba(255, 245, 220, 0.95);
   font-family: 'Playfair Display', serif;
   font-size: 0.92rem;
   font-style: italic;
   line-height: 1.8;
   margin: 0;
   width: 100%;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
 }
 
 .loader-signature {
