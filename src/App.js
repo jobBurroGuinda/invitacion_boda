@@ -133,7 +133,7 @@ function AudioPlayer({ invitacion }) {
                 color: 'rgba(255,255,255,0.85)',
                 fontFamily: "'Montserrat', sans-serif",
                 fontSize: '0.85rem',
-                maxWidth: '320px',
+                width: '100%',
                 margin: '12px auto 0',
                 lineHeight: 1.7,
                 whiteSpace: 'pre-line',
@@ -301,7 +301,7 @@ export function WeddingPage({ invitacion = null, asistenciaSlot = null }) {
   ];
 
   return (
-    <div>
+    <div style={{ overflowX: 'hidden', maxWidth: '100%' }}>
       <AudioPlayer invitacion={invitacion} />
       <Navbar isPublic={isPublic} />
 
