@@ -133,7 +133,7 @@ function AudioPlayer({ invitacion }) {
                 {invitacion.mensaje_novios}
               </p>
             )}
-            <div className="loader-open-btn">
+            <div className="hero-btn-outline loader-open-btn">
               {invitacion ? 'Abrir invitación' : 'Abrir'}
             </div>
           </div>

@@ -139,13 +139,6 @@ a:hover { color: var(--secondary-color); }
 
 .loader-open-btn {
   margin-top: 24px;
-  border: 1px solid rgba(255,255,255,0.5);
-  padding: 10px 28px;
-  font-size: 0.72rem;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  color: #fff;
-  display: inline-block;
   flex-shrink: 0;
 }
 
@@ -1006,7 +999,8 @@ a:hover { color: var(--secondary-color); }
   .loader-text { font-size: 1.35rem; margin-top: 10px; }
   .drawing-heart { width: 80px; height: 80px; }
   .loader-message { font-size: 0.82rem; line-height: 1.65; }
-  .loader-open-btn { margin-top: 18px; padding: 9px 22px; font-size: 0.68rem; }
+  .loader-open-btn { margin-top: 18px; }
+  .loader-open-btn.hero-btn-outline { padding: 0.7rem 1.8rem; font-size: 0.75rem; }
   .music-btn { bottom: 16px; right: 12px; width: 44px; height: 44px; font-size: 16px; }
   .footer-main { padding: 50px 0 0; }
   .map-section iframe { height: 300px; }
