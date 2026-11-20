@@ -687,7 +687,7 @@ a:hover { color: var(--secondary-color); }
   color: var(--text-color);
 }
 
-
+/* ===== CARRUSEL SWIPER ===== */
 .swiper-gallery .swiper-slide img {
   width: 100%;
   height: 280px;

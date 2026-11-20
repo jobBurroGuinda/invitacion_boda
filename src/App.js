@@ -11,11 +11,11 @@ import {
   BRIDE_NAME, GROOM_NAME, WEDDING_DATE_DISPLAY, WEDDING_DATE,
   LOVE_STORY_TITLE, LOVE_STORY_PARAGRAPH_1,
   PROPOSAL_TEXT_1, PROPOSAL_TEXT_2,
-  CEREMONY, SCHEDULE, SCHEDULE_TITLE,
+  CEREMONY, SCHEDULE,
   DRESSCODE_TITLE, DRESSCODE_STYLE, DRESSCODE_DESCRIPTION, DRESSCODE_PALETTE,
   GIFT_TITLE, GIFT_BUTTON,
   REGISTRY_TITLE, REGISTRY_DESCRIPTION, REGISTRY_BANK_INFO,
-  MUSIC_FILE, WEDDING_INFO_TITLE, WEDDING_INFO_DESCRIPTION,
+  MUSIC_FILE, WEDDING_INFO_TITLE,
 } from './config';
 
 /* ─── Inicializar AOS una sola vez ─── */
@@ -25,12 +25,11 @@ function useAOS() {
   }, []);
 }
 
-/* ─── Inicializar Swipers ─── */
+/* ─── Inicializar Swipers con cleanup ─── */
 function useSwipers(ready) {
   useEffect(() => {
     if (!ready || !window.Swiper) return;
-    // Carrusel galería inferior
-    new window.Swiper('.swiper-gallery', {
+    const gallery = new window.Swiper('.swiper-gallery', {
       loop: true,
       slidesPerView: 2,
       spaceBetween: 16,
@@ -41,8 +40,7 @@ function useSwipers(ready) {
         1024: { slidesPerView: 4 },
       },
     });
-    // Slider wedding party
-    new window.Swiper('.swiper-party', {
+    const party = new window.Swiper('.swiper-party', {
       loop: true,
       slidesPerView: 1,
       spaceBetween: 30,
@@ -53,6 +51,10 @@ function useSwipers(ready) {
         1024: { slidesPerView: 4, spaceBetween: 50 },
       },
     });
+    return () => {
+      gallery.destroy(true, true);
+      party.destroy(true, true);
+    };
   }, [ready]);
 }
 
@@ -83,6 +85,8 @@ function AudioPlayer({ invitacion }) {
     audio.addEventListener('canplaythrough', () => setAudioReady(true), { once: true });
     audio.load();
     if (audio.readyState >= 3) setAudioReady(true);
+    // Cleanup: garantizar que body.loading se elimine si el componente se desmonta
+    return () => document.body.classList.remove('loading');
   }, []);
 
   const handleEnter = () => {
@@ -288,7 +292,7 @@ export function WeddingPage({ invitacion = null, asistenciaSlot = null }) {
   const galleryImages = [
     'foto_galeria_1.jpg', 'foto_galeria_2.jpg',
     'foto_galeria_3.jpg', 'foto_galeria_4.jpg',
-    'foto_galeria_5.jpg', 'foto_galeria_5.jpg',
+    'foto_galeria_5.jpg', 'historia_1.jpg',
   ];
 
   const carouselImages = [
@@ -516,7 +520,7 @@ export function WeddingPage({ invitacion = null, asistenciaSlot = null }) {
       {!isPublic && asistenciaSlot}
 
       {/* ── MESA DE REGALOS ── */}
-      <section id="regalos" className="section-padding bg-light-rose">
+      <section id="regalos" className="section-padding">
         <div className="container">
           <div className="text-center">
             <h2 className="section-title" data-aos="fade-up">{REGISTRY_TITLE}</h2>
@@ -549,7 +553,7 @@ export function WeddingPage({ invitacion = null, asistenciaSlot = null }) {
         </div>
       </section>
 
-      {/* ── AGRADECIMIENTO (estilo blog/journal del template2) ── */}
+      {/* ── NUESTRO DIARIO (estilo blog/journal del template2) ── */}
       <section className="section-padding bg-light-rose">
         <div className="container">
           <div className="text-center">
@@ -593,7 +597,7 @@ export function WeddingPage({ invitacion = null, asistenciaSlot = null }) {
       </section>
 
       {/* ── CARRUSEL SWIPER ── */}
-      <section className="section-padding bg-light-rose" style={{ paddingTop: '40px', paddingBottom: '60px' }}>
+      <section className="section-padding" style={{ paddingTop: '40px', paddingBottom: '60px' }}>
         <div className="container-fluid px-0">
           <div className="swiper swiper-gallery">
             <div className="swiper-wrapper">
