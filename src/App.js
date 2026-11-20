@@ -292,7 +292,7 @@ export function WeddingPage({ invitacion = null, asistenciaSlot = null }) {
   const galleryImages = [
     'foto_galeria_1.jpg', 'foto_galeria_2.jpg',
     'foto_galeria_3.jpg', 'foto_galeria_4.jpg',
-    'foto_galeria_5.jpg', 'historia_1.jpg',
+    'historia_1.jpg',
   ];
 
   const carouselImages = [
