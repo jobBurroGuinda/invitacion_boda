@@ -129,30 +129,11 @@ function AudioPlayer({ invitacion }) {
               {invitacion ? invitacion.name : `${GROOM_NAME} & ${BRIDE_NAME}`}
             </div>
             {invitacion?.mensaje_novios && (
-              <p style={{
-                color: 'rgba(255,255,255,0.85)',
-                fontFamily: "'Montserrat', sans-serif",
-                fontSize: '0.85rem',
-                width: '100%',
-                margin: '12px auto 0',
-                lineHeight: 1.7,
-                whiteSpace: 'pre-line',
-                maxHeight: '100px',
-                overflowY: 'auto',
-              }}>
+              <p className="loader-message">
                 {invitacion.mensaje_novios}
               </p>
             )}
-            <div style={{
-              marginTop: '28px',
-              border: '1px solid rgba(255,255,255,0.5)',
-              padding: '10px 32px',
-              fontSize: '0.75rem',
-              letterSpacing: '3px',
-              textTransform: 'uppercase',
-              color: '#fff',
-              display: 'inline-block',
-            }}>
+            <div className="loader-open-btn">
               {invitacion ? 'Abrir invitación' : 'Abrir'}
             </div>
           </div>

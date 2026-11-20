@@ -115,10 +115,38 @@ a:hover { color: var(--secondary-color); }
   z-index: 9999;
   text-align: center;
   transition: opacity 0.5s, transform 0.5s;
-  width: 90%;
-  max-width: 380px;
+  width: min(88vw, 420px);
+  max-height: 90dvh;
   box-sizing: border-box;
-  padding: 0 16px;
+  padding: 24px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+}
+
+.loader-message {
+  color: rgba(255,255,255,0.88);
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.9rem;
+  line-height: 1.75;
+  white-space: pre-line;
+  margin-top: 14px;
+  width: 100%;
+  overflow: visible;
+}
+
+.loader-open-btn {
+  margin-top: 24px;
+  border: 1px solid rgba(255,255,255,0.5);
+  padding: 10px 28px;
+  font-size: 0.72rem;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #fff;
+  display: inline-block;
+  flex-shrink: 0;
 }
 
 .drawing-heart {
@@ -137,12 +165,13 @@ a:hover { color: var(--secondary-color); }
 }
 .loader-text {
   font-family: var(--heading-font);
-  font-size: 2rem;
+  font-size: 1.8rem;
   font-style: italic;
   color: var(--loader-accent-color);
-  margin-top: 20px;
+  margin-top: 16px;
   opacity: 0;
   animation: fade-in-text 1s 1.5s ease-out forwards;
+  line-height: 1.2;
 }
 
 @keyframes draw-heart-path { to { stroke-dashoffset: 0; } }
@@ -974,7 +1003,10 @@ a:hover { color: var(--secondary-color); }
   .section-title { font-size: 1.9rem; }
   .section-subtitle { font-size: 0.85rem; letter-spacing: 2px; margin-bottom: 2rem; }
   .section-padding { padding: 60px 0; }
-  .loader-text { font-size: 1.6rem; }
+  .loader-text { font-size: 1.35rem; margin-top: 10px; }
+  .drawing-heart { width: 80px; height: 80px; }
+  .loader-message { font-size: 0.82rem; line-height: 1.65; }
+  .loader-open-btn { margin-top: 18px; padding: 9px 22px; font-size: 0.68rem; }
   .music-btn { bottom: 16px; right: 12px; width: 44px; height: 44px; font-size: 16px; }
   .footer-main { padding: 50px 0 0; }
   .map-section iframe { height: 300px; }
